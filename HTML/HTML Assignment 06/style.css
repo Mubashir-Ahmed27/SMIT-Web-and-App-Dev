@@ -1,0 +1,109 @@
+/* === Periodic Table Styling === */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #f7f9fc 0%, #e9eef5 100%);
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: #2c3e50;
+}
+
+/* Grid setup */
+.periodic-table {
+  display: grid;
+  grid-template-columns: repeat(18, 70px);
+  grid-auto-rows: 80px;
+  gap: 6px;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+
+/* Base element box */
+.element {
+  background: #ffffffcc;
+  border: 1px solid #d0d6e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 6px 2px;
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Subtle color variety by region */
+.element:nth-child(6n+1) { background-color: #eaf3ff; }   /* Nonmetals */
+.element:nth-child(6n+2) { background-color: #f9f2ff; }   /* Noble gases */
+.element:nth-child(6n+3) { background-color: #eaf9f0; }   /* Alkali/Alkaline */
+.element:nth-child(6n+4) { background-color: #fff5e6; }   /* Transition metals */
+.element:nth-child(6n+5) { background-color: #f2faff; }   /* Metalloids */
+.element:nth-child(6n)   { background-color: #fef7f7; }   /* Lanthanides/Actinides */
+
+/* Inner text styling */
+.element .number {
+  font-size: 0.7em;
+  color: #6b7a8f;
+  align-self: flex-start;
+  margin-left: 4px;
+}
+
+.element .symbol {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.element .name {
+  font-size: 0.75em;
+  color: #455a64;
+}
+
+.element .mass {
+  font-size: 0.7em;
+  color: #708090;
+}
+
+/* Hover glow & 3D lift */
+.element:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .periodic-table {
+    grid-template-columns: repeat(12, 70px);
+  }
+}
+
+@media (max-width: 800px) {
+  .periodic-table {
+    grid-template-columns: repeat(9, 70px);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  .periodic-table {
+    grid-template-columns: repeat(6, 60px);
+    grid-auto-rows: 70px;
+  }
+  .element {
+    font-size: 0.8em;
+    border-radius: 6px;
+  }
+}
