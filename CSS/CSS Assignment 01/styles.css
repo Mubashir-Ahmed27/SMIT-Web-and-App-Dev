@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: larger;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+}
+
+/* Individual Cards */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+  width: 280px;
+  min-height: 280px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings */
+.card h2 {
+  font-size: 1.4rem;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+/* Text */
+.card p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Light Theme */
+.light {
+  border: black, 2px, solid;
+  border-radius: 50px;
+  background-color: ghostwhite;
+  box-shadow: #333 4px 6px 8px;
+  text-shadow: #111 4px 6px 12px;
+  padding: 30px;
+}
+
+/* Dark Theme */
+.dark {
+  color: gray;
+  text-shadow: #111 4px 6px 12px;
+  border: black, 2px, solid;
+  border-radius: 50px;
+  background-color: black;
+  box-shadow: #333 4px 6px 8px;
+  padding: 30px;
+}
+
+/* Dark Theme */
+.nature {
+  color: ghostwhite;
+  text-shadow: #111 4px 6px 12px;
+  border: black, 2px, solid;
+  border-radius: 50px;
+  background-color: lightgreen;
+  box-shadow: #333 4px 6px 8px;
+  padding: 30px;
+}
